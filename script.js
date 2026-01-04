@@ -418,3 +418,20 @@ window.addEventListener('load', () => {
         }
     }, 100);
 });
+
+// Video thumbnail click handler
+document.addEventListener('DOMContentLoaded', () => {
+    const videoThumbnail = document.getElementById('videoThumbnail');
+    const youtubeVideo = document.getElementById('youtubeVideo');
+    
+    if (videoThumbnail && youtubeVideo) {
+        videoThumbnail.addEventListener('click', () => {
+            // Hide thumbnail
+            videoThumbnail.style.display = 'none';
+            
+            // Load and show YouTube video with autoplay
+            youtubeVideo.src = 'https://www.youtube.com/embed/ZtdIvmjkNLs?autoplay=1&rel=0&modestbranding=1';
+            youtubeVideo.style.display = 'block';
+        });
+    }
+});
