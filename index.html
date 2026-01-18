@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sri Amman Coirs - Quality Coir Products Since 2008</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,8 +15,11 @@
     <header class="header">
         <div class="container">
             <div class="nav-brand">
-                <h1>Sri Amman Coirs</h1>
-                <span class="tagline">Quality Since 2008</span>
+                <img src="images/logo.png" alt="Sri Amman Coirs Logo" class="logo">
+                <div class="brand-text">
+                    <h1>Sri Amman Coirs</h1>
+                    <span class="tagline">Quality Since 2008</span>
+                </div>
             </div>
             <nav class="nav">
                 <ul class="nav-links">
@@ -189,6 +194,16 @@
                 <h2>Our Products</h2>
                 <p>Comprehensive range of premium coir products</p>
             </div>
+            
+            <!-- Brochure Download Section -->
+            <div class="brochure-section" style="margin-bottom: 40px; text-align: center; padding: 30px; background: #f8f9fa; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.05);">
+                <h3 style="margin-bottom: 15px; color: #1a5f7a;">Download Our Product Catalog</h3>
+                <p style="margin-bottom: 20px; color: #555;">Get detailed specifications and information about all our products in one convenient PDF.</p>
+                <a href="downloads/Sri Amman Coirs Product Spec 2.pdf" download class="btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+                    <i class="fas fa-download"></i> Download Brochure (PDF)
+                </a>
+            </div>
+            
             <div class="products-grid">
                 <!-- Coco Peat -->
                 <div class="product-card">
@@ -202,18 +217,19 @@
                     </div>
                     <div class="product-content">
                         <h3>Coco Peat</h3>
-                        <p>Best organic fertilizer for summer growth - premium quality coco peat that promotes vibrant plant development and ensures bountiful harvests</p>
+                        <p>Premium quality coco peat for superior plant growth and water retention. Our coco peat is 100% natural and perfect for all your horticultural needs.</p>
                         <div class="product-variants">
-                            <span class="variant">5 kg packs</span>
-                            <span class="variant">450 gram packs</span>
+                            <span class="variant">5 kg blocks (High EC and Low EC)</span>
+                            <span class="variant">650 gram briquettes</span>
+                            <span class="variant">Grow bags (Customizable)</span>
                         </div>
                         <div class="product-features">
                             <ul>
                                 <li>Excellent water retention</li>
                                 <li>100% organic & eco-friendly</li>
                                 <li>pH balanced for optimal growth</li>
-                                <li>Essential nutrients for plants</li>
-                                <li>Perfect for summer gardening</li>
+                                <li>Superior Aeration & Root Development</li>
+                                <li>Lightweight & Easy to Handle</li>
                             </ul>
                         </div>
                     </div>
@@ -396,11 +412,12 @@
                         <div class="form-group">
                             <select name="product-interest" required>
                                 <option value="">Select Product Interest</option>
-                                <option value="coco-peat">Coco Peat</option>
+                                <option value="5kg-blocks">5 kg blocks</option>
+                                <option value="650g-briquettes">650 gram briquettes</option>
+                                <option value="grow-bag">Grow bag</option>
                                 <option value="coco-brooms">Coco Brooms</option>
                                 <option value="grass-broom">Grass Broom</option>
-                                <option value="yarn">2 Ply Yarn</option>
-                                <option value="bulk-order">Bulk Order</option>
+                                <option value="2ply-yarn">2 Ply Yarn</option>
                             </select>
                         </div>
                         <div class="form-group">
