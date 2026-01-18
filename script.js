@@ -1,3 +1,34 @@
+// YouTube Video Loader
+function loadVideo(element) {
+    const videoWrapper = element.closest('.video-wrapper');
+    const iframeContainer = videoWrapper.querySelector('.video-iframe');
+    
+    // Only load the video if it hasn't been loaded yet
+    if (!iframeContainer.hasAttribute('data-loaded')) {
+        const iframe = document.createElement('iframe');
+        iframe.setAttribute('src', 'https://www.youtube.com/embed/QxzkHRL-ekk?autoplay=1&rel=0&modestbranding=1&showinfo=0&autohide=1');
+        iframe.setAttribute('frameborder', '0');
+        iframe.setAttribute('allow', 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture');
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.style.opacity = '0';
+        iframe.style.transition = 'opacity 0.5s ease';
+        
+        iframeContainer.appendChild(iframe);
+        iframeContainer.setAttribute('data-loaded', 'true');
+        
+        // Small delay to ensure the iframe is in the DOM before fading in
+        setTimeout(() => {
+            iframe.style.opacity = '1';
+        }, 50);
+    }
+    
+    // Add a small delay before showing the iframe to allow for smooth transition
+    setTimeout(() => {
+        element.classList.add('hidden');
+        iframeContainer.classList.add('visible');
+    }, 100);
+}
+
 // Mobile Navigation
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
